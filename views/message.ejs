@@ -1,11 +1,18 @@
 <div class="message">
-  <div class="message__header">
-    <%= message.user %>
-    <span class="message__time"><%= message.added.toLocaleString() %></span>
+  <div class="message__container">
+    <div class="message__header">
+      <div class="message__time">
+        <%= message.added.toLocaleString() %>
+      </div>
+      <div class="message__username">
+        <%= message.user %>
+      </div>
+    </div>
+    <div class="message__text">
+      <%= message.text %>
+    </div>
   </div>
-  <div class="message__text">
-    <%= message.text %>
-  </div>
+
   <button>
     <a href="/messages/<%= message.id %>">View Details</a>
   </button>
