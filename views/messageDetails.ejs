@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title><%= title %></title>
+</head>
+<body>
+  <div class="message-details">
+    <h1>Message Details</h1>
+    <div class="message-details__user">
+      <strong>User:</strong> <span><%= message.user %></span>
+    </div>
+    <div class="message-details__text">
+      <strong>Message:</strong> <span><%= message.text %></span>
+    </div>
+    <div class="message-details__time">
+      <strong>Added:</strong> <span><%= message.added.toLocaleString() %></span>
+    </div>
+  </div>
+  <button>
+    <a href="/">Back</a>
+  </button>
+</body>
+</html>
