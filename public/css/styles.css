@@ -8,9 +8,8 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  /* background-color: #7BA4A8; */
   background-color: #B3DBC0;
-  color: #FFFFFF;
+  color: black;
   font-family: 'Doto', 'Lucida Sans', 'Lucida Sans Regular', sans-serif;
   font-weight: 700;
   font-size: 2rem;
@@ -47,32 +46,42 @@ ul {
   list-style-type: none;
   padding: 2rem 0;
   margin: auto;
-  max-width: 80vw;
+  max-width: 90vw;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
 }
 
-.message {
+.message,
+.message-details,
+form {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 2rem;
   background-color: #FDF6F6;
   border-radius: 7px;
-  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+}
+
+.message {
+  justify-content: space-between;
+  align-items: center;
 }
 
 .message__container {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   gap: 0.7rem;
-  width: 50%;
+  width: 70%;
 }
 
 .message__header {
   display: flex;
   gap: 1rem;
+  font-family: 'Doto', 'Lucida Sans', 'Lucida Sans Regular', sans-serif;
+  font-weight: 900;
+  font-size: 1.5rem;
+  color: black;
 }
 
 .message__username, .message__text {
@@ -80,4 +89,81 @@ ul {
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+} 
+
+.message__text {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+}
+
+.message-details__container {
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.message-details {
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  margin: 1rem auto;
+  width: 50vw;
+  gap: 1rem;
+  font-size: 1.5rem;
+}
+
+.message-details button {
+  align-self: flex-end;
+}
+
+.message-details__user,
+.message-details__text {
+  width: 100%;
+  word-wrap: break-word;
+  text-align: left;
+}
+
+form {
+  width: 50vw;
+  margin: 1rem auto;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 3rem;
+}
+
+.form__username,
+.form__message {
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+}
+
+form label {
+  width: 30%;
+  text-align: left;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+form input {
+  padding: 7px;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 1.2rem;
+  width: 70%;
+}
+
+.form__buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.button--send {
+  background-color: #B3DBC0;
+  font-weight: 700;
+  font-size: 1.5rem;
+  cursor: pointer;
 }

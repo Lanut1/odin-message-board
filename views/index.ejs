@@ -10,14 +10,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Doto:wght@100..900&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <h1>Mini Messageboard</h1>
-    <button>
-      <a href="/new">
-        Send new message
-      </a>
-    </button>
-  </header>
+  <%- include('header') %>
   <ul>
     <% messages.forEach((message) => { %>
       <li>
